@@ -1,7 +1,22 @@
 public class GenericSort {
     public static void main(String[] args) {
-        Integer [] integers = {new Integer(1), Integer(3)};
-        Double [] doubles = {new Double(3.4), new Double(1.3)};
+//        Integer [] integers = {new Integer(1), new Integer(3)};
+//        Double [] doubles = {new Double(3.4), new Double(1.3)};
+//        Character [] characers = {new Character('a'), new Character('z'), new Character('r')};
+        String [] strings = {"Tom", "Andrew", "Chelsea", "Max"};
+        Integer [] integers1 = {3, 5, 8, 0 , 90};
+
+
+
+//        sort(integers);
+//        sort(doubles);
+//        sort(characers);
+        sort(strings);
+        sort(integers1);
+
+
+        System.out.println("sort integer objects");
+        printList(integers1);
 
 
     }
