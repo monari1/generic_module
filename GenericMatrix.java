@@ -16,6 +16,22 @@ public abstract class GenericMatrix <E extends Number> {
 
         return result;
     }
+    public E[][] multiplyMatrix(E[][] matrix1, E[][] matrix2){
+        if ((matrix1.length != matrix2.length)|| (matrix1[0].length!= matrix2[0].length)){
+            throw new RuntimeException("Matrix do not have same length");
+        }
+        E[][] result = (E[][])new Number[matrix1.length][matrix1[0].length];
+        for (int i=0; i<result.length; i++){
+            for (int j = 0; j<result[i].length;j++){
+                result[i][j] = zero();
+                for (int k = 0; k<matrix1[j].length;k++){
+                result[i][j] = add(result[i][j], multiply(matrix1[i][j], matrix2[i][j]));
+            }}}
+
+
+        return result;
+    }
+
 
 
 
